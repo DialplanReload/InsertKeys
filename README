@@ -1,0 +1,45 @@
+#
+# insert.sh - Programa feito para adicionar chaves automaticamente em servidores que as remove ao 
+# reiniciar - Ex: BRASCLOUD
+#
+# Autor: Anderson Freitas <tmsi.freitas@gmail.com>
+# Site: http://www.dialplanreload.com/
+# Repositorio: https://github.com/DialplanReload/InsertKeys
+#
+# Desenvolvido sob licensa GPL. 
+# Fique a vontade para contribuir com a evolucao deste programa.
+#
+#-----------------------------------------------------------------------------------------------
+# WELCOME ABOARD SOLDIER
+#
+# For use this script you need execute all steps below
+#
+# Download the source-code
+#
+# git clone git@github.com:DialplanReload/InsertKeys.git
+
+# Create authorized_keys default
+#
+# vi /var/www/authorized_keys
+
+##### MOST IMPORTANT
+
+# Inside the above file, you will need to put all the keys that should have access to the server
+
+# Grant execute permission
+#
+# chmod +x InsertKeys/insert.sh
+
+# Copy archive for init.d
+#
+# cp InsertKeys/insert.sh /etc/init.d/InsertKeys.sh
+
+# Grant permissions 
+#
+# chmod 755 /etc/init.d/InsertKeys.sh
+
+# Add script for initialize on system boot
+#
+# update-rc.d InsertKeys.sh defaults
+
+# That's all folks!
